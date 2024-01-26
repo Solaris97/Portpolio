@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url(../styles/font/NotoSansKR-VariableFont_wght.ttf);
+}

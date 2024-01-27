@@ -3,7 +3,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        starYellow: '#ffdd9d'
+      },
+    },
+    fontFamily: {
+      korFont: ["korFont"],
+      engTitile: ["engTitle"]
+    },
     height: {
       "10v": "10vh",
       "20v": "20vh",

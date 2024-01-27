@@ -18,6 +18,8 @@ const MainPage: React.FC = () => {
                                 portfolio
                             </li>
                         </ul>
+                        {/* 하단 버튼 */}
+                        <button className="absolute z-10 bottom-20 w-12 min-h-12 max-h-12 animate-bounce opacity-60 text-xl rounded-full bg-gray-500 text-white hover:opacity-100">▼</button>
                     </div>
 
                     {/* 배경 캔버스 */}
@@ -25,10 +27,6 @@ const MainPage: React.FC = () => {
                         <ShootingStars />
                     </div>
 
-                    {/* 하단 이동 버튼 */}
-                    <div>
-                        <button className="absolute bottom-20 ml-auto mr-auto w-12 min-h-12 max-h-12 animate-bounce opacity-60 text-xl rounded-full bg-gray-500 text-white hover:opacity-100">▼</button>
-                    </div>
                 </div>
             </div>
             <About />

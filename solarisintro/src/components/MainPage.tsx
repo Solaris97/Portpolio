@@ -5,12 +5,12 @@ import Carrer from './Carrer';
 import ShootingStars from "./ShootingStar";
 const MainPage: React.FC = () => {
     return (
-        <div className="inline">
+        <div>
             {/* 시작 페이지 영역 */}
             <div className="w-full h-100v text-center mx-0 my-auto">
-                <div className="relative w-full h-100v">
+                <div className="w-full h-100v">
                     {/* 텍스트 영역 */}
-                    <div className="absolute w-full h-100v flex items-center flex-col justify-center">
+                    <div className="absolute w-full h-100v flex items-center flex-col justify-center overflow-hidden">
                         <ul className="absolute z-10">
                             <li className="font-engTitile text-white text-7xl md:text-9xl m-6 transition-colors duration-500 hover:text-starYellow">
                                 FE Web Developer
@@ -32,7 +32,7 @@ const MainPage: React.FC = () => {
             </div>
             <About />
             <Skills />
-            <Carrer />
+            {/* <Carrer /> */}
         </div >
     )
 };

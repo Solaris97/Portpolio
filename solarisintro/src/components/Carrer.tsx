@@ -8,6 +8,8 @@ const Carrer: React.FC = () => {
                 <h2 className="font-engTitile text-5xl md:text-6xl m-6">
                     Carrer
                 </h2>
+                <div className=" border-b-2 border-white w-40 min-h-2">
+                </div>
             </div>
 
 

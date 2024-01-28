@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import About from './About';
+import Skills from './Skills';
 import Carrer from './Carrer';
 import ShootingStars from "./ShootingStar";
 const MainPage: React.FC = () => {
@@ -12,7 +13,7 @@ const MainPage: React.FC = () => {
                     <div className="absolute w-full h-100v flex items-center flex-col justify-center">
                         <ul className="absolute z-10">
                             <li className="font-engTitile text-white text-7xl md:text-9xl m-6 transition-colors duration-500 hover:text-starYellow">
-                                Web Developer
+                                FE Web Developer
                             </li>
                             <li className="font-engTitile text-white text-7xl md:text-9xl m-20 transition-colors duration-500 hover:text-starYellow">
                                 portfolio
@@ -30,6 +31,7 @@ const MainPage: React.FC = () => {
                 </div>
             </div>
             <About />
+            <Skills />
             <Carrer />
         </div >
     )

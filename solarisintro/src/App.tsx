@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MainPage from './components/MainPage';
-import './styles/tailwind.css';	// 추가
+import MainPage from './pages/MainPage';
+import './tailwind.css';	// 추가
 import './App.css';
 
 function App() {

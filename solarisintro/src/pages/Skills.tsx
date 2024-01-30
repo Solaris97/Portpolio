@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import IconHtml from "../assets/logo/html5Logo.png";
 import IconCss from "../assets/logo/css3Logo.png";
 import IconJs from "../assets/logo/jsLogo.png";

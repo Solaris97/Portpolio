@@ -32,8 +32,8 @@ const Archive: React.FC = () => {
                                 </div>
                                 <div className="mt-6">
                                     <ul className="list-inside list-disc">
-                                        <li>진행한 프로젝트의 코드가 있습니다.</li>
-                                        <li>코드 공부하면서 만든 작업물이 있습니다.</li>
+                                        <li>진행한 프로젝트의 코드</li>
+                                        <li>공부하면서 만든 작업물의 코드</li>
                                     </ul>
                                 </div>
                             </div>

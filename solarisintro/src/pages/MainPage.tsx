@@ -3,6 +3,7 @@ import Intro from "./Intro";
 import About from "./About";
 import Archive from "./Archive";
 import Skills from "./Skills";
+import Projects from "./Projects";
 import useObserver from "../components/opacityVariants ";
 
 const MainPage: React.FC = () => {
@@ -14,7 +15,7 @@ const MainPage: React.FC = () => {
     };
 
 
-    const { ref,observer } = useObserver();
+    const { ref, observer } = useObserver();
 
     return (
         <div className="relative">
@@ -27,6 +28,8 @@ const MainPage: React.FC = () => {
             <div ref={ref} className={observer}>
                 <Skills />
             </div>
+
+            <Projects />
         </div>
     )
 };

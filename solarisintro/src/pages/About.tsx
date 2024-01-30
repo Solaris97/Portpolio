@@ -17,7 +17,7 @@ const About: React.FC = () => {
     return (
         <div className="w-full h-[800px] md:h-[600px] text-center mx-0 my-auto overflow-hidden">
             {/* 타이틀 텍스트 영역 */}
-            <div className="absolute w-full h-full flex items-center flex-col px-20 mt-10">
+            <div className="absolute w-full flex items-center flex-col px-20 mt-10">
                 <h2 className="font-engTitile text-black text-5xl md:text-6xl m-6 cursor-default">
                     About Me
                 </h2>

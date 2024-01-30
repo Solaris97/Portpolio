@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import IconHtml from "../assets/logo/html5Logo.png";
 import IconCss from "../assets/logo/css3Logo.png";
 import IconJs from "../assets/logo/jsLogo.png";
@@ -64,29 +64,42 @@ const SKILLS_FIELD_VCS: skillsItems[] = [
 ]
 
 const Skills: React.FC = () => {
+    const [expState, setExpState] = useState<string>("");
+    const handleMouseOver = (e: React.MouseEvent<HTMLDivElement>) => {
+        setExpState(e.currentTarget.id)
+    }
+
+
+    const handleMouseOut = (e: React.MouseEvent<HTMLDivElement>) => {
+        setExpState("")
+    }
 
     return (
 
 
-        <div className="w-full h-[800px] md:h-[1100px]	text-center mx-0 my-auto bg-blue-500 overflow-hidden">
+        <div className="w-full h-[2400px] lg:h-[1100px]	text-center mx-0 my-auto bg-blue-500 overflow-hidden">
             {/* 텍스트 영역 */}
-            <div className="absolute w-full h-full flex items-center flex-col px-24 mt-10">
-                <h2 className="font-engTitile text-white text-5xl md:text-6xl m-6 cursor-default">
+            <div className="absolute w-full flex items-center flex-col px-24 mt-10">
+                <h2 className="font-engTitile text-white text-5xl lg:text-6xl m-6">
                     Skills
                 </h2>
                 <div className=" border-b-2 border-white w-32 h-2">
                 </div>
 
-                <div className="md:flex md:items-center justify-center mt-20 w-full gap-8">
-                    <div className="w-90 h-[600px]">
-                        <div className="bg-white w-80 h-[500px] rounded-lg text-left shadow-lg" >
+                <div className="flex items-center flex-col justify-center lg:flex lg:items-center lg:flex-row lg:justify-center mt-20 w-full lg:gap-8">
+                    <div className="w-90 h-[650px]">
+                        <div className="bg-white w-80 h-[550px] rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="text-xl border-b-2">Front-End</p>
 
                                 <div className="flex items-center justify-center mt-4 gap-2">
                                     {SKILLS_FIELD_FE1.map(({ id, src }) => (
-                                        <div className="w-24 h-24 flex items-center justify-center hover:scale-110" id={id}>
-                                            <img className="w-18 h-20" src={src} alt={id}></img>
+                                        <div
+                                            className="w-24 h-24 flex items-center justify-center brightness-50 hover:scale-110 hover:brightness-100"
+                                        >
+                                            <img onMouseOver={handleMouseOver}
+                                                onMouseOut={handleMouseOut}
+                                                className="w-18 h-20" src={src} alt={id} id={id}></img>
                                         </div>
                                     ))}
                                 </div>
@@ -107,12 +120,14 @@ const Skills: React.FC = () => {
                                         </div>
                                     ))}
                                 </div>
-
+                            <div>
+                                <p>{expState}</p>
+                            </div>
                             </div>
                         </div>
                     </div>
-                    <div className="w-90 h-[600px]">
-                        <div className="bg-white w-80 h-[500px] rounded-lg text-left shadow-lg" >
+                    <div className="w-90 h-[650px]">
+                        <div className="bg-white w-80 h-[550px] rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="text-xl border-b-2">Back-End</p>
                                 <div className="flex items-center justify-left mt-4 gap-2">
@@ -132,7 +147,7 @@ const Skills: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-90 h-[600px]">
+                    <div className="w-90 h-[650px]">
                         <div className="bg-white w-80 h-96 rounded-lg text-left shadow-lg" >
                             <div className="p-8">
 
@@ -146,7 +161,7 @@ const Skills: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-white w-80 h-96 mt-8 rounded-lg text-left shadow-lg" >
+                        <div className="bg-white w-80 h-96 mt-12 lg:mt-8 rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="text-xl border-b-2">VCS</p>
                                 <div className="flex items-center justify-left mt-4 gap-8">

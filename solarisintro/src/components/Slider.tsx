@@ -173,7 +173,7 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
     return (
 
         <div className="w-[420px] h-[480px]">
-            <div className="relative w-full h-full flex items-center cursor-pointer"
+            <div className="relative w-full h-full flex items-center cursor-grab active:cursor-grabbing"
                 ref={sliderRef}
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}

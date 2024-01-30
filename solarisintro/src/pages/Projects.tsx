@@ -32,24 +32,24 @@ const Projects: React.FC = () => {
     return (
 
 
-        <div className="w-full h-[800px] md:h-[1600px] text-center mx-0 my-auto bg-green-200 overflow-hidden">
+        <div className="w-full h-[2500px] lg:h-[1600px] text-center mx-0 my-auto bg-yellow-400 overflow-hidden">
             {/* 텍스트 영역 */}
-            <div className="absolute w-full h-full flex items-center flex-col px-24 mt-10">
-                <h2 className="font-engTitile text-white text-5xl md:text-6xl m-6 cursor-default">
+            <div className="absolute w-full flex items-center flex-col px-24 mt-10 overflow-hidden">
+                <h2 className="font-engTitile text-white text-5xl lg:text-6xl m-6 cursor-default">
                     Projects
                 </h2>
                 <div className=" border-b-2 border-white w-32 h-2">
                 </div>
 
-                <div className="flex items-center flex-col justify-center mt-20 w-full gap-8">
-                    <div className="w-[800px] md:w-[1000px] h-[780px]">
-                        <div className="bg-white w-full h-[600px] rounded-lg text-left shadow-lg" >
+                <div className="flex items-center flex-col justify-center mt-20 w-full gap-8 ">
+                    <div className="w-[550px] lg:w-[1000px] h-[2200px] lg:h-[1380px]">
+                        <div className="bg-white w-full h-[1050px] lg:h-[600px] rounded-lg text-left shadow-lg" >
                             <div className="p-4 flex flex-col items-center">
                                 <div className="mt-6 text-center">
                                     <p className="font-bold text-3xl">포트폴리오 프로젝트</p>
-                                    <p className="text-gray-500 mt-4">2024.01 ~ 2024.01</p>
+                                    <p className="text-gray-500 mt-4">2024.01 ~ 2024.01 1인 개발</p>
                                 </div>
-                                <div className="flex gap-8">
+                                <div className="lg:flex lg:gap-8">
                                     <div>
                                         <Slider projectImages={PROJECT_IMG1} />
                                     </div>
@@ -81,13 +81,13 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white w-full h-[600px] mt-14 rounded-lg text-left shadow-lg" >
+                        <div className="bg-white w-full h-[1050px] mt-12 lg:h-[600px] rounded-lg text-left shadow-lg " >
                             <div className="p-4 flex flex-col items-center">
                                 <div className="mt-6 text-center">
                                     <p className="font-bold text-3xl">사전문진 웹 사이트</p>
-                                    <p className="text-gray-500 mt-4">2022.12 ~ 2023.03 <br />FE 1명    BE 1명</p>
+                                    <p className="text-gray-500 mt-4">2022.12 ~ 2023.03 FE 1명    BE 1명</p>
                                 </div>
-                                <div className="flex gap-8">
+                                <div className="lg:flex lg:gap-8">
                                     <div>
                                         <Slider projectImages={PROJECT_IMG2} />
                                     </div>

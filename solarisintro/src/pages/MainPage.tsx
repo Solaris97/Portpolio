@@ -23,7 +23,6 @@ const MainPage: React.FC = () => {
             <div ref={AboutRef}>
                 <About />
             </div>
-            <Archive />
 
             <Skills />
 
@@ -31,6 +30,9 @@ const MainPage: React.FC = () => {
             </div> */}
 
             <Projects />
+            
+            <Archive />
+
         </div>
     )
 };

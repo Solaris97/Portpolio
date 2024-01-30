@@ -7,6 +7,20 @@ module.exports = {
       colors: {
         starYellow: '#ffdd9d'
       },
+      keyframes: {
+        leftSlide: {
+          from: { transform: "translateX(-150%)" },
+          to: { transform: "translateX(0)" },
+        },
+        rightSlide: {
+          from: { transform: "translateX(150%)" },
+          to: { transform: "translateX(0%)" },
+        },
+      },
+      animation: {
+        leftSlide: "leftSlide 0.3s ease-out 0s 1",
+        rightSlide: "rightSlide 0.3s ease-out 0s 1",
+      },
       height: {
         "10v": "10vh",
         "20v": "20vh",

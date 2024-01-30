@@ -33,22 +33,40 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="flex items-center flex-col justify-center mt-20 w-full gap-8">
-                    <div className="w-[800px] md:w-[1000px] h-[800px]">
-                        <div className="bg-white w-full h-[640px] rounded-lg text-left shadow-lg" >
+                    <div className="w-[800px] md:w-[1000px] h-[780px]">
+                        <div className="bg-white w-full h-[600px] rounded-lg text-left shadow-lg" >
                             <div className="p-4 flex flex-col items-center">
-                                <div className="mt-6">
-                                    <p className="font-bold text-3xl">포트폴리오</p>
+                                <div className="mt-6 text-center">
+                                    <p className="font-bold text-3xl">포트폴리오 프로젝트</p>
                                     <p className="text-gray-500 mt-4">2024.01 ~ 2024.01</p>
                                 </div>
                                 <div className="flex gap-8">
                                     <div>
                                         <Slider projectImages={PROJECT_IMG1} />
                                     </div>
-                                    <div className="mt-6">
-                                        <ul className="list-inside list-disc">
-                                            <li>진행한 프로젝트의 코드가 있습니다.</li>
-                                            <li>코드 공부하면서 만든 작업물이 있습니다.</li>
-                                        </ul>
+                                    <div>
+                                        <div className="mt-12 w-[420px] h-60">
+                                            <span><p>해당 프로젝트는 <span className="font-bold">포트폴리오</span> 용도로 제작했습니다.</p></span>
+                                            <p className="mt-6">개발을 진행하면서 Tailwind CSS의 장단점에 대해서 알게되었고, 평소 라이브러리를 사용하던 캐러셀등의 기능도
+                                                직접 구현을 해본 프로젝트 입니다.
+                                            </p>
+                                            <p className="mt-6">배포를 진행하여 어쩌고 저쩌고
+                                            </p>
+                                        </div>
+                                        <div className="w-[420px] border-t borer-gray flex">
+                                            <div className="mt-6 w-40">
+                                                <p className="h-12">주요 기능</p>
+                                                <p className="mt-2">Github</p>
+                                                <p className="mt-2">기술 스택</p>
+                                            </div>
+                                            <div className="mt-6">
+                                                <p>인적 사항 소개,기술 스택,GitHub 링크,프로젝트 경험,경력</p>
+                                                <a href="https://github.com/Solaris97/Solaris_Introduce">
+                                                    <p className="mt-2">https://github.com/Solaris97/Solaris_Introduce</p>
+                                                </a>
+                                                <p className="mt-2">React, TypeScript, Tailwind CSS</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

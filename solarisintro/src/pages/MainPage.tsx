@@ -14,7 +14,7 @@ const MainPage: React.FC = () => {
     };
 
 
-    const { ref, text } = useObserver();
+    const { ref,observer } = useObserver();
 
     return (
         <div className="relative">
@@ -24,7 +24,7 @@ const MainPage: React.FC = () => {
             </div>
             <Archive />
 
-            <div ref={ref} className={text}>
+            <div ref={ref} className={observer}>
                 <Skills />
             </div>
         </div>

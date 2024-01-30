@@ -15,7 +15,7 @@ interface SliderProps {
 const Slider: React.FC<SliderProps> = ({ projectImages }) => {
     const [pickIndex, setPickIndex] = useState<number>(0);
     const [pickers, setPickers] = useState<JSX.Element[]>([]);
-    const [animation, setAnimation] = useState<string>("");
+    const [animation, setAnimation] = useState<string>("w-[420px] h-[400px]");
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [offset, setOffset] = useState(0);
@@ -27,9 +27,9 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
             return;
         }
         if (pickIndex > index) {
-            setAnimation("animate-rightSlide");
+            setAnimation("animate-rightSlide w-[420px] h-[400px]");
         } else {
-            setAnimation("animate-leftSlide");
+            setAnimation("animate-leftSlide w-[420px] h-[400px]");
         }
         setPickIndex(index);
     }, [pickIndex]);
@@ -40,7 +40,7 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
 
         setPickers(projectImages.map((image: imgItems, index: number) => {
             return (
-                <div className={`${pickIndex === index ? "bg-orange-500 w-3 h-3 rounded-full" : "bg-white w-3 h-3 rounded-full"}`}
+                <div className={`${pickIndex === index ? "bg-orange-500 w-3 h-3 rounded-full" : "bg-gray-400 w-3 h-3 rounded-full"}`}
                     onClick={() => onPickIndex(index)}>
                 </div>
             );
@@ -49,31 +49,35 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
 
     // 왼쪽 화살표 클릭
     const handlePrevClick = useCallback((): void => {
-        setAnimation("animate-rightSlide");
-        console.log(animation);
         if (pickIndex <= 0) {
             // state 업데이트 전, 해당 변수의 값이 0이라면
             // length의 -1로 지정하여 가장 마지막으로 이동
 
             setPickIndex(projectImages.length - 1);
+            setAnimation("animate-rightSlide w-[420px] h-[400px]");
 
             return;
         }
 
         setPickIndex(pickIndex - 1);
+        setAnimation("animate-rightSlide w-[420px] h-[400px]");
+
         // // 인덱스 감소
     }, [pickIndex]);
 
     // 오른쪽 화살표 클릭
     const handleNextClick = useCallback((): void => {
-        setAnimation("animate-leftSlide");
         if (pickIndex + 1 === projectImages.length) {
             // +1 했을 때, 배열의 인덱스를 벗어난다면
             // 0으로 설정하여 가장 첫번째로 이동
             setPickIndex(0);
+            setAnimation("animate-leftSlide w-[420px] h-[400px]");
+
             return;
         }
         setPickIndex(pickIndex + 1);
+        setAnimation("animate-leftSlide w-[420px] h-[400px]");
+
         // 인덱스 증가
     }, [pickIndex]);
 
@@ -112,7 +116,7 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
             setTimeout(() => {
                 currentImage.style.transition = '';
             }, 300);
-            setAnimation("");
+            setAnimation("w-[420px] h-[400px]");
             return;
         }
 
@@ -144,22 +148,32 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
     };
 
     useEffect(() => {
-        // 애니메이션이 설정된 후에 초기 상태로 리셋
-        if (animation) {
-            const timer = setTimeout(() => {
-                setAnimation("");
-            }, 300);
+        // 6초 후 자동으로 다음 슬라이드로 이동
+        const timer = setTimeout(() => {
+            handleNextClick();
+        }, 6000);
 
-            return () => clearTimeout(timer);
-        }
-    }, [animation]);
+        return () => clearTimeout(timer);
+    }, [pickIndex, handleNextClick]);
+
+
+    // useEffect(() => {
+    //     // 애니메이션이 설정된 후에 초기 상태로 리셋
+    //     if (animation) {
+    //         const timer = setTimeout(() => {
+    //             setAnimation("");
+    //         }, 300);
+
+    //         return () => clearTimeout(timer);
+    //     }
+    // }, [animation]);
 
 
 
     return (
 
-        <div className="w-[420px] h-[460px]">
-            <div className="relative w-full h-full flex items-center"
+        <div className="w-[420px] h-[480px]">
+            <div className="relative w-full h-full flex items-center cursor-pointer"
                 ref={sliderRef}
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}
@@ -168,18 +182,17 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
             >
                 <div className="relative flex items-center flex-col">
                     <div className="overflow-hidden">
-                        <img src={projectImages[pickIndex].src} key={animation} className={animation}
-                        />
+                        <img src={projectImages[pickIndex].src} key={animation} className={animation} />
                     </div>
                     <div className="absolute flex bottom-4 gap-2">
                         {pickers}
                     </div>
                 </div>
                 <div className="absolute left-4">
-                    <button onClick={handlePrevClick} className="h-6 w-6 rotate-90 text-base rounded-full bg-gray-500 text-white ro">▼</button>
+                    <button onClick={handlePrevClick} className="h-6 w-6 rotate-90 text-base rounded-full opacity-60 bg-gray-500 hover:opacity-100 text-white">▼</button>
                 </div>
                 <div className="absolute right-4 ">
-                    <button onClick={handleNextClick} className="h-6 w-6 -rotate-90 text-base rounded-full bg-gray-500 text-white ro">▼</button>
+                    <button onClick={handleNextClick} className="h-6 w-6 -rotate-90 text-base rounded-full opacity-60 bg-gray-500 hover:opacity-100 text-white">▼</button>
 
                 </div>
             </div>

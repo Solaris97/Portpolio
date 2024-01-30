@@ -18,7 +18,7 @@ const Intro: React.FC<IntroProps> = ({ handleMoveDownClick }) => {
             <div className="w-full h-100v">
                 {/* 텍스트 영역 */}
                 <div className="absolute w-full h-100v flex items-center flex-col justify-center overflow-hidden">
-                    <ul className="absolute z-10">
+                    <ul className="absolute z-10 cursor-default">
                         <li className="font-engTitile text-white text-7xl md:text-9xl m-6 transition-colors duration-500 hover:text-starYellow">
                             FE Web Developer
                         </li>

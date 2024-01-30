@@ -71,7 +71,7 @@ const Skills: React.FC = () => {
         <div className="w-full h-[800px] md:h-[1100px]	text-center mx-0 my-auto bg-blue-500 overflow-hidden">
             {/* 텍스트 영역 */}
             <div className="absolute w-full h-full flex items-center flex-col px-24 mt-10">
-                <h2 className="font-engTitile text-white text-5xl md:text-6xl m-6">
+                <h2 className="font-engTitile text-white text-5xl md:text-6xl m-6 cursor-default">
                     Skills
                 </h2>
                 <div className=" border-b-2 border-white w-32 h-2">
@@ -115,16 +115,16 @@ const Skills: React.FC = () => {
                         <div className="bg-white w-80 h-[500px] rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="text-xl border-b-2">Back-End</p>
-                                <div className="flex items-center justify-left mt-4 gap-8">
+                                <div className="flex items-center justify-left mt-4 gap-2">
                                     {SKILLS_FIELD_BE1.map(({ id, src }) => (
-                                        <div className="w-30 h-30 flex items-center justify-left hover:scale-110" id={id}>
-                                            <img className="w-20 h-20" src={src} alt={id}></img>
+                                        <div className="w-32 h-32 flex items-center justify-left hover:scale-110" id={id}>
+                                            <img className="w-30 h-30" src={src} alt={id}></img>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="flex items-center justify-left mt-4 gap-8">
+                                <div className="flex items-center justify-left mt-4 gap-2">
                                     {SKILLS_FIELD_BE2.map(({ id, src }) => (
-                                        <div className="w-30 h-30 flex items-center justify-left hover:scale-110" id={id}>
+                                        <div className="w-32 h-32 flex items-center justify-left hover:scale-110" id={id}>
                                             <img className="w-20 h-20" src={src} alt={id}></img>
                                         </div>
                                     ))}

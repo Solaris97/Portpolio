@@ -16,9 +16,10 @@ const Archive: React.FC = () => {
                 <div className=" border-b-2 border-white w-32 h-2">
                 </div>
 
+
                 <div className="flex items-center flex-col justify-center mt-20 w-full gap-8">
                     <a href="https://github.com/Solaris97">
-                        <div className="w-96 md:w-[600px] h-[500px]">
+                        <div className="min-w-[360px] w-11/12 md:w-[600px] h-[500px]">
                             <div className="bg-white w-full h-[380px] rounded-lg text-left shadow-lg
                     hover:scale-110 transition-transform ease-in-out duration-500" >
                                 <div className="p-16 flex flex-col items-center">

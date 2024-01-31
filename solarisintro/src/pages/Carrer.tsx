@@ -8,28 +8,25 @@ const Carrer: React.FC = () => {
     return (
 
 
-        <div className="font-baseFont w-full h-[2600px] md:h-[2400px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
+        <div className="font-baseFont w-full h-[3850px] md:h-[3000px] lg:h-[2450px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
             {/* 텍스트 영역 */}
-            <div className="absolute w-full flex items-center flex-col px-24 mt-10">
+            <div className="absolute w-full flex items-center flex-col px-2 md:px-24 mt-10">
                 <h2 className="font-bold text-5xl md:text-6xl m-6 cursor-default">
                     Carrer
                 </h2>
                 <div className="border-b-2 border-black w-32 h-2">
                 </div>
 
-                <div className="flex items-center flex-col justify-center mt-20 w-full">
-
-                    <div className="flex flex-row justify-center h-[1100px]">
-                        <div className="w-[300px] h-[1000px] border-r border-gray-300 flex flex-row justify-center">
+                <div className="flex items-center flex-col justify-center mt-24 w-full">
+                    <div className="flex flex-col lg:flex-row justify-center h-[2000px] md:h-[1400px] lg:h-[1100px]">
+                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[950px] border-gray-300 lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full border-2 w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo2} className="w-44 h-30" />
                             </div>
                         </div>
 
-
-
-                        <div className="w-[700px] h-[1000px] text-left ml-8">
-                            <div className="border-b border-gray-300 w-full h-[260px]">
+                        <div className="md:w-[700px] sm:[100px] h-[1450px] md:h-[1100px] text-left ml-8">
+                            <div className="border-b border-gray-300 h-[350px] md:h-[260px]">
                                 <p className="text-4xl"><strong>보이노시스</strong></p>
                                 <p className="text-gray-500 mt-6">2022.08 - 2023.11</p>
                                 <p className="mt-6">음성을 분석하여 치매 관련 질병들을 조기 진단하는 AI 모델을 개발하고<br />
@@ -37,7 +34,7 @@ const Carrer: React.FC = () => {
                                 <p className="mt-6">프론트엔드 포지션으로 신규 서비스의 개발 및 운영을 담당하였고 음성을 수집하는 UWP 앱의 유지보수를 담당하였습니다.</p>
                             </div>
                             <div className="my-6">
-                                <p className="text-3xl">▎ <strong>사내 데이터 관리 솔루션</strong></p>
+                                <p className="text-xl">▎ <strong>사내 데이터 관리 솔루션</strong></p>
                                 <p className="text-gray-500 mt-6">2023.02 - 2023.06</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>JWT 토큰을 사용하여 로그인 구현 및 JWT 토큰을 Cookie에 저장하여 REST API 통신 시 이를 담아보내 사용자의 권한에 맞는 데이터를 받아오는 기능 개발</span></li>
@@ -46,7 +43,7 @@ const Carrer: React.FC = () => {
                                 </ul>
                             </div>
                             <div className="my-6">
-                                <p className="text-3xl">▎ <strong>사전 문진 웹 서비스</strong></p>
+                                <p className="text-xl">▎ <strong>사전 문진 웹 서비스</strong></p>
                                 <p className="text-gray-500 mt-6">2022.12 - 2023.03</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>CDD를 통해 개발과 디자인을 동시에 진행하여 개발 생산성을 높임</span> </li>
@@ -58,7 +55,7 @@ const Carrer: React.FC = () => {
                             </div>
 
                             <div className="my-6">
-                                <p className="text-3xl">▎ <strong>골든 타임 파인더</strong></p>
+                                <p className="text-xl">▎ <strong>골든 타임 파인더</strong></p>
                                 <p className="text-gray-500 mt-6">2022.08 ~ 2022.12</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>MediaRecorder를 활용하여 다양한 브라우저에서 녹음 기능 구현</span> </li>
@@ -70,23 +67,23 @@ const Carrer: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-row justify-center h-[1100px]">
-                        <div className="w-[300px] h-[880px] border-r border-gray-300 flex flex-row justify-center">
+                    <div className="flex flex-col lg:flex-row justify-center h-[1350px] md:h-[1000px] lg:h-[1100px]">
+                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[880px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo1} className="w-60 h-60 rounded-full border-2 " />
                             </div>
                         </div>
 
 
-                        <div className="w-[700px] h-[880px] text-left ml-8">
-                            <div className="border-b border-gray-300 w-full h-[260px]">
+                        <div className="w-11/12 md:w-[700px] sm:[100px] h-[800px] md:h-[700px] text-left ml-8">
+                            <div className="border-b border-gray-300 w-full h-[350px] md:h-[260px]">
                                 <p className="text-4xl"><strong>씨앤에프시스템(주)</strong></p>
                                 <p className="text-gray-500 mt-6">2021.03 - 2022.05</p>
                                 <p className="mt-6">회계 및 인사 관리 ERP를 개발 공급하고 있는 회사입니다.</p>
                                 <p className="mt-6">풀스택 포지션으로 인사 복무 급여 ERP의 신규 기능 개발 및 코드 리팩토링을 담당하였습니다.</p>
                             </div>
                             <div className="my-6">
-                                <p className="text-3xl">▎ <strong>기관 재직 인원 자동화 시스템 개선</strong></p>
+                                <p className="text-xl">▎ <strong>기관 재직 인원 자동화 시스템 개선</strong></p>
                                 <p className="text-gray-500 mt-6">2022.01 - 2022.03</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>DB 스케쥴러를 이용하여 기관의 인원을 계산하는 로직이 DB 종속성이 심해 Spring 스케쥴러로 변경</span> </li>
@@ -94,7 +91,7 @@ const Carrer: React.FC = () => {
                                 </ul>
                             </div>
                             <div className="my-6">
-                                <p className="text-3xl">▎ <strong>교육 관리 기능 개발</strong></p>
+                                <p className="text-xl">▎ <strong>교육 관리 기능 개발</strong></p>
                                 <p className="text-gray-500 mt-6">2021.08 - 2021.12</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>사용자의 교육 신청, 이수, 수강 등을 관리하는 화면 개발</span> </li>
@@ -103,7 +100,7 @@ const Carrer: React.FC = () => {
                             </div>
 
                             <div className="my-6">
-                                <p className="text-3xl">▎ <strong>쿼리 마이그레이션</strong></p>
+                                <p className="text-xl">▎ <strong>쿼리 마이그레이션</strong></p>
                                 <p className="text-gray-500 mt-6">2021.06 - 2021.12</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>Oracle로 작성되어 있던 쿼리를 MySQL, MSSQL 쿼리로 마이 그레이션</span> </li>

@@ -15,10 +15,10 @@ const ABOUT_FIELD: aboutItems[] = [
 
 const About: React.FC = () => {
     return (
-        <div className="w-full h-[800px] md:h-[600px] text-center mx-0 my-auto overflow-hidden">
+        <div className="font-baseFont w-full h-[800px] md:h-[600px] text-center mx-0 my-auto overflow-hidden">
             {/* 타이틀 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-20 mt-10">
-                <h2 className="font-engTitile text-black text-5xl md:text-6xl m-6 cursor-default">
+                <h2 className="font-bold text-black text-5xl md:text-6xl m-6 cursor-default">
                     About Me
                 </h2>
                 <div className=" border-b-2 border-purple-400 w-40 min-h-2">
@@ -29,7 +29,7 @@ const About: React.FC = () => {
                     {/* 상세 내용 텍스트 영역 */}
                     {ABOUT_FIELD.map(({ fields, title }) => (
                         <div className="flex-auto" key={title}>
-                            <p className="text-2xl min-h-12">{title}</p>
+                            <p className="text-2xl min-h-12 font-semibold">{title}</p>
                             <div className="border-b-2 border-gray w-10 min-h-2 m-auto">
                             </div>
                             <p className="mt-3 mb-10 md:mb-3 text-xl">{fields}</p>

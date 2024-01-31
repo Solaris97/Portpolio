@@ -31,17 +31,16 @@ const Projects: React.FC = () => {
 
     return (
 
-
-        <div className="w-full h-[2500px] lg:h-[1600px] text-center mx-0 my-auto bg-yellow-400 overflow-hidden">
+        <div className="font-baseFont w-full h-[2500px] lg:h-[1600px] text-center mx-0 my-auto bg-yellow-400 overflow-hidden">
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-24 mt-10 overflow-hidden">
-                <h2 className="font-engTitile text-white text-5xl lg:text-6xl m-6 cursor-default">
-                    Projects
+                <h2 className="font-bold font-engTitle text-white text-5xl lg:text-6xl m-6 cursor-default">
+                    PROJECT
                 </h2>
                 <div className=" border-b-2 border-white w-32 h-2">
                 </div>
 
-                <div className="flex items-center flex-col justify-center mt-20 w-full gap-8 ">
+                <div className="flex items-center flex-col justify-center mt-20 w-full gap-8">
                     <div className="w-[550px] lg:w-[1000px] h-[2200px] lg:h-[1380px]">
                         <div className="bg-white w-full h-[1050px] lg:h-[600px] rounded-lg text-left shadow-lg" >
                             <div className="p-4 flex flex-col items-center">

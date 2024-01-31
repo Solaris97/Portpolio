@@ -35,7 +35,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      korFont: ["korFont"],
+      baseFont: ["baseFont"],
       engTitile: ["engTitle"]
     },
   },

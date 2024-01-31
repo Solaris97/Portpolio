@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 /* 한글 기본 폰트 */
-@font-face {
-    font-family: 'korFont';
-    src: url(./assets/font/NotoSansKR-VariableFont_wght.ttf);
-}
+    @font-face {
+        font-family: 'baseFont';
+        src: url(./assets/font/AppleSDGothic.ttf);
+    }
 
-/* 영어 타이틀 폰트 */
-@font-face {
-    font-family: 'engTitle';
-    src: url(./assets/font/Peace-Sans-Webfont.ttf);
-}
+
+    /* 영어 타이틀 폰트 */
+    @font-face {
+        font-family: 'engTitle';
+        src: url(./assets/font/Peace-Sans-Webfont.ttf);
+    }

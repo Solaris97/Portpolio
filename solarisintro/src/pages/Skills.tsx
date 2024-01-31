@@ -77,10 +77,10 @@ const Skills: React.FC = () => {
     return (
 
 
-        <div className="w-full h-[2400px] lg:h-[1100px]	text-center mx-0 my-auto bg-blue-500 overflow-hidden">
+        <div className="font-baseFont w-full h-[2400px] lg:h-[1100px]	text-center mx-0 my-auto bg-blue-500 overflow-hidden">
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-24 mt-10">
-                <h2 className="font-engTitile text-white text-5xl lg:text-6xl m-6">
+                <h2 className="font-bold text-white text-5xl lg:text-6xl m-6 cursor-default">
                     Skills
                 </h2>
                 <div className=" border-b-2 border-white w-32 h-2">
@@ -90,7 +90,7 @@ const Skills: React.FC = () => {
                     <div className="w-90 h-[650px]">
                         <div className="bg-white w-80 h-[550px] rounded-lg text-left shadow-lg" >
                             <div className="p-8">
-                                <p className="text-xl border-b-2">Front-End</p>
+                                <p className="font-bold text-xl border-b-2 text-orange-500">Front-End</p>
 
                                 <div className="flex items-center justify-center mt-4 gap-2">
                                     {SKILLS_FIELD_FE1.map(({ id, src }) => (
@@ -120,16 +120,16 @@ const Skills: React.FC = () => {
                                         </div>
                                     ))}
                                 </div>
-                            <div>
-                                <p>{expState}</p>
-                            </div>
+                                <div>
+                                    <p>{expState}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="w-90 h-[650px]">
                         <div className="bg-white w-80 h-[550px] rounded-lg text-left shadow-lg" >
                             <div className="p-8">
-                                <p className="text-xl border-b-2">Back-End</p>
+                                <p className="font-bold text-xl border-b-2 text-orange-500">Back-End</p>
                                 <div className="flex items-center justify-left mt-4 gap-2">
                                     {SKILLS_FIELD_BE1.map(({ id, src }) => (
                                         <div className="w-32 h-32 flex items-center justify-left hover:scale-110" id={id}>
@@ -150,8 +150,7 @@ const Skills: React.FC = () => {
                     <div className="w-90 h-[650px]">
                         <div className="bg-white w-80 h-96 rounded-lg text-left shadow-lg" >
                             <div className="p-8">
-
-                                <p className="text-xl border-b-2">Tools</p>
+                                <p className="font-bold text-xl border-b-2 text-orange-500">Tools</p>
                                 <div className="flex items-center justify-left mt-4 gap-8">
                                     {SKILLS_FIELD_TOOLS.map(({ id, src }) => (
                                         <div className="w-24 h-20 flex items-center justify-left hover:scale-110" id={id}>
@@ -163,7 +162,7 @@ const Skills: React.FC = () => {
                         </div>
                         <div className="bg-white w-80 h-96 mt-12 lg:mt-8 rounded-lg text-left shadow-lg" >
                             <div className="p-8">
-                                <p className="text-xl border-b-2">VCS</p>
+                                <p className="font-bold text-xl border-b-2 text-orange-500">VCS</p>
                                 <div className="flex items-center justify-left mt-4 gap-8">
                                     {SKILLS_FIELD_VCS.map(({ id, src }) => (
                                         <div className="w-24 h-20 flex items-center justify-left hover:scale-110" id={id}>

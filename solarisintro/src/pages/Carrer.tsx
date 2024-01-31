@@ -8,10 +8,10 @@ const Carrer: React.FC = () => {
     return (
 
 
-        <div className="w-full h-[2600px] md:h-[2400px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
+        <div className="font-baseFont w-full h-[2600px] md:h-[2400px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-24 mt-10">
-                <h2 className="font-engTitile text-5xl md:text-6xl m-6 cursor-default">
+                <h2 className="font-bold text-5xl md:text-6xl m-6 cursor-default">
                     Carrer
                 </h2>
                 <div className="border-b-2 border-black w-32 h-2">
@@ -71,17 +71,14 @@ const Carrer: React.FC = () => {
                     </div>
 
                     <div className="flex flex-row justify-center h-[1100px]">
-                        {/* <div className="w-[300px] h-[900px] border-r border-gray-300">
-                            <img src={carrerLogo1} className="w-60 h-60 border-2 border-gray-300 rounded-full" />
-                        </div> */}
-                        <div className="w-[300px] h-[1000px] border-r border-gray-300 flex flex-row justify-center">
+                        <div className="w-[300px] h-[880px] border-r border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo1} className="w-60 h-60 rounded-full border-2 " />
                             </div>
                         </div>
 
 
-                        <div className="w-[700px] h-[900px] text-left ml-8">
+                        <div className="w-[700px] h-[880px] text-left ml-8">
                             <div className="border-b border-gray-300 w-full h-[260px]">
                                 <p className="text-4xl"><strong>씨앤에프시스템(주)</strong></p>
                                 <p className="text-gray-500 mt-6">2021.03 - 2022.05</p>

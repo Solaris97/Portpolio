@@ -4,6 +4,8 @@ import About from "./About";
 import Archive from "./Archive";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Carrer from "./Carrer";
+
 import useObserver from "../components/opacityVariants ";
 
 const MainPage: React.FC = () => {
@@ -30,7 +32,7 @@ const MainPage: React.FC = () => {
             </div> */}
 
             <Projects />
-            
+            <Carrer />
             <Archive />
 
         </div>

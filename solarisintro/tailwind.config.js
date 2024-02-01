@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        starYellow: '#ffdd9d'
+        starYellow: '#ffdd9d',
+        starBlack: '#282a3a'
       },
       keyframes: {
         leftSlide: {

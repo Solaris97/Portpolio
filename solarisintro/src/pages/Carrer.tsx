@@ -12,7 +12,7 @@ const Carrer: React.FC = () => {
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-2 md:px-24 mt-10">
                 <h2 className="font-bold text-5xl md:text-6xl m-6 cursor-default">
-                    Carrer
+                    CARRER
                 </h2>
                 <div className="border-b-2 border-black w-32 h-2">
                 </div>
@@ -31,7 +31,7 @@ const Carrer: React.FC = () => {
                                 <p className="text-gray-500 mt-6">2022.08 - 2023.11</p>
                                 <p className="mt-6">음성을 분석하여 치매 관련 질병들을 조기 진단하는 AI 모델을 개발하고<br />
                                     이를 활용한 솔루션을 개발하는 헬스케어 회사입니다.</p>
-                                <p className="mt-6">프론트엔드 포지션으로 신규 서비스의 개발 및 운영을 담당하였고 음성을 수집하는 UWP 앱의 유지보수를 담당하였습니다.</p>
+                                <p className="mt-6"><strong>프론트엔드 포지션</strong>으로 신규 서비스의 개발 및 운영을 담당하였고 음성을 수집하는 UWP 앱의 유지보수를 담당하였습니다.</p>
                             </div>
                             <div className="my-6">
                                 <p className="text-xl">▎ <strong>사내 데이터 관리 솔루션</strong></p>
@@ -68,7 +68,7 @@ const Carrer: React.FC = () => {
                     </div>
 
                     <div className="flex flex-col lg:flex-row justify-center h-[1350px] md:h-[1000px] lg:h-[1100px]">
-                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[880px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
+                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[750px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo1} className="w-60 h-60 rounded-full border-2 " />
                             </div>
@@ -76,18 +76,19 @@ const Carrer: React.FC = () => {
 
 
                         <div className="w-11/12 md:w-[700px] sm:[100px] h-[800px] md:h-[700px] text-left ml-8">
-                            <div className="border-b border-gray-300 w-full h-[350px] md:h-[260px]">
+                            <div className="border-b border-gray-300 w-full h-[250px] md:h-[200px]">
                                 <p className="text-4xl"><strong>씨앤에프시스템(주)</strong></p>
                                 <p className="text-gray-500 mt-6">2021.03 - 2022.05</p>
-                                <p className="mt-6">회계 및 인사 관리 ERP를 개발 공급하고 있는 회사입니다.</p>
-                                <p className="mt-6">풀스택 포지션으로 인사 복무 급여 ERP의 신규 기능 개발 및 코드 리팩토링을 담당하였습니다.</p>
+                                <p className="mt-6">회계 및 인사 관리 ERP 올샵을 개발 및 판매하고 있는 회사입니다.</p>
+                                <p className="mt-6"><strong>풀스택 포지션</strong>으로 인사 복무 급여 ERP의 신규 기능 개발 및 코드 리팩토링을 담당하였습니다.</p>
                             </div>
                             <div className="my-6">
                                 <p className="text-xl">▎ <strong>기관 재직 인원 자동화 시스템 개선</strong></p>
                                 <p className="text-gray-500 mt-6">2022.01 - 2022.03</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>DB 스케쥴러를 이용하여 기관의 인원을 계산하는 로직이 DB 종속성이 심해 Spring 스케쥴러로 변경</span> </li>
-                                    <li><span>인원 확인 화면 초기 로딩시 불러올 데이터가 많아 사용자가 기다리는 시간이 길었는데 스켈레톤 로딩 구현으로 UX 개선</span></li>
+                                    <li><span>인사 정보 조회시 이미지를 프리로딩하게 변경하여 성능 최적화</span> </li>
+                                    <li><span>인원 확인 화면 초기 로딩시 불러올 데이터가 많아 사용자가 기다리는 시간이 길어 스켈레톤 로딩 구현으로 UX 개선</span></li>
                                 </ul>
                             </div>
                             <div className="my-6">

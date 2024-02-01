@@ -19,7 +19,7 @@ const About: React.FC = () => {
             {/* 타이틀 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-20 mt-10">
                 <h2 className="font-bold text-black text-5xl md:text-6xl m-6 cursor-default">
-                    About Me
+                    ABOUT ME
                 </h2>
                 <div className=" border-b-2 border-purple-400 w-40 min-h-2">
                 </div>

@@ -64,15 +64,15 @@ const SKILLS_FIELD_VCS: skillsItems[] = [
 ]
 
 const Skills: React.FC = () => {
-    const [expState, setExpState] = useState<string>("");
-    const handleMouseOver = (e: React.MouseEvent<HTMLDivElement>) => {
-        setExpState(e.currentTarget.id)
-    }
+    // const [expState, setExpState] = useState<string>("");
+    // const handleMouseOver = (e: React.MouseEvent<HTMLDivElement>) => {
+    //     setExpState(e.currentTarget.id)
+    // }
 
 
-    const handleMouseOut = (e: React.MouseEvent<HTMLDivElement>) => {
-        setExpState("")
-    }
+    // const handleMouseOut = (e: React.MouseEvent<HTMLDivElement>) => {
+    //     setExpState("")
+    // }
 
     return (
 
@@ -81,7 +81,7 @@ const Skills: React.FC = () => {
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-24 mt-10">
                 <h2 className="font-bold text-white text-5xl lg:text-6xl m-6 cursor-default">
-                    Skills
+                    SKILLS
                 </h2>
                 <div className=" border-b-2 border-white w-32 h-2">
                 </div>
@@ -95,10 +95,10 @@ const Skills: React.FC = () => {
                                 <div className="flex items-center justify-center mt-4 gap-2">
                                     {SKILLS_FIELD_FE1.map(({ id, src }) => (
                                         <div
-                                            className="w-24 h-24 flex items-center justify-center brightness-50 hover:scale-110 hover:brightness-100"
-                                        >
-                                            <img onMouseOver={handleMouseOver}
-                                                onMouseOut={handleMouseOut}
+                                            className="w-24 h-24 flex items-center justify-center brightness-50 hover:scale-110" id={id}>
+                                            <img
+                                                // onMouseOver={handleMouseOver}
+                                                //     onMouseOut={handleMouseOut}
                                                 className="w-18 h-20" src={src} alt={id} id={id}></img>
                                         </div>
                                     ))}
@@ -119,9 +119,6 @@ const Skills: React.FC = () => {
                                             <img className="w-18 h-20" src={src} alt={id}></img>
                                         </div>
                                     ))}
-                                </div>
-                                <div>
-                                    <p>{expState}</p>
                                 </div>
                             </div>
                         </div>

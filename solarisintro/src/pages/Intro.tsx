@@ -3,14 +3,14 @@ import ShootingStars from "../components/ShootingStar";
 
 
 interface IntroProps {
-    handleMoveDownClick: () => void;
+    handleMoveDownClick: (flag: string) => void;
 }
 
 
 const Intro: React.FC<IntroProps> = ({ handleMoveDownClick }) => {
 
     const handleClick = () => {
-        handleMoveDownClick();
+        handleMoveDownClick("About");
     }
 
     return (

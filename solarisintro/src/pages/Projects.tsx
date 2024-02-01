@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-24 mt-10 overflow-hidden">
                 <h2 className="font-bold font-engTitle text-white text-5xl lg:text-6xl m-6 cursor-default">
-                    PROJECT
+                    PROJECTS
                 </h2>
                 <div className=" border-b-2 border-white w-32 h-2">
                 </div>
@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
                             <div className="p-4 flex flex-col items-center">
                                 <div className="mt-6 text-center">
                                     <p className="font-bold text-3xl">포트폴리오 프로젝트</p>
-                                    <p className="text-gray-500 mt-4">2024.01 ~ 2024.01 1인 개발</p>
+                                    <p className="text-gray-500 mt-4">2024.01 - 2024.01 1인 개발</p>
                                 </div>
                                 <div className="md:flex md:gap-8 mt-8 w-full h-full">
                                     <div className="flex items-center flex-col justify-center">
@@ -58,7 +58,7 @@ const Projects: React.FC = () => {
                                             <p className="mt-6">개발을 진행하면서 <strong>Tailwind CSS</strong>의 장단점에 대해서 알게되었고, 평소 라이브러리를 사용하던 캐러셀등의 기능도
                                                 직접 구현을 해보면서  프로젝트 입니다.
                                             </p>
-                                            <p className="mt-6">배포를 진행하여 어쩌고 저쩌고
+                                            <p className="mt-6">Bootstrap 템플릿 중 마음에 드는 템플릿을 보고 html/css를 직접 구현하여 완성했습니다.
                                             </p>
                                         </div>
                                         <div className="w-full md:w-[280px] lg:w-[480px] flex">
@@ -89,7 +89,7 @@ const Projects: React.FC = () => {
                             <div className="p-4 flex flex-col items-center">
                                 <div className="mt-6 text-center">
                                     <p className="font-bold text-3xl">사전문진 웹 사이트</p>
-                                    <p className="text-gray-500 mt-4">2022.12 ~ 2023.03 FE 1명    BE 1명</p>
+                                    <p className="text-gray-500 mt-4">2022.12 - 2023.03 FE 1명    BE 1명</p>
                                 </div>
                                 <div className="md:flex md:gap-8 mt-8 w-full h-full">
                                     <div className="flex items-center flex-col justify-center">

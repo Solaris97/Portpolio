@@ -6,9 +6,11 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Carrer from "./Carrer";
 import Header from "../components/Header"
-import useObserver from "../components/opacityVariants ";
+import useObserver from "../hooks/useObserver";
 
 const MainPage: React.FC = () => {
+
+    //포커싱 이동을 위한 useRef
     const IntroRef = useRef<HTMLDivElement | null>(null);
     const AboutRef = useRef<HTMLDivElement | null>(null);
     const SkillsRef = useRef<HTMLDivElement | null>(null);
@@ -17,7 +19,7 @@ const MainPage: React.FC = () => {
     const ArchiveRef = useRef<HTMLDivElement | null>(null);
 
 
-    //이동 버튼
+    //포커싱 이동
     const handleMoveDownClick = (flag: string) => {
         if (flag === "Intro") {
             IntroRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -36,18 +38,12 @@ const MainPage: React.FC = () => {
     };
 
 
-
-
+    //포커싱 확인 Custom hooks
     const { ref, IntroYn } = useObserver();
 
-    useEffect(() => {
-        console.log(IntroYn)
-    }, [IntroYn])
-
     return (
-        <div className="relative">
 
-            
+        <div className="relative">
             <Header handleMoveDownClick={handleMoveDownClick} IntroYn={IntroYn} />
             <div className="z-30">
 

@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
 
     return (
 
-        <div className="font-baseFont w-full h-[2200px] md:h-[1600px] lg:h-[1600px] text-center mx-0 my-auto bg-yellow-400 overflow-hidden">
+        <div className="font-baseFont w-full h-[2100px] md:h-[1600px] lg:h-[1600px] text-center mx-0 my-auto bg-yellow-400 overflow-hidden">
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-24 mt-10 overflow-hidden">
                 <h2 className="font-bold font-engTitle text-white text-5xl lg:text-6xl m-6 cursor-default">

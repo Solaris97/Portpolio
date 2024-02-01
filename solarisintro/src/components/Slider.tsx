@@ -16,7 +16,10 @@ interface SliderProps {
 const Slider: React.FC<SliderProps> = ({ projectImages }) => {
     const [pickIndex, setPickIndex] = useState<number>(0);
     const [pickers, setPickers] = useState<JSX.Element[]>([]);
+
+    //TailwindCSS 동적 할당을 위해 선언
     const [animation, setAnimation] = useState<string>("w-[300px] h-[220px] md:w-[300px] md:h-[300px] lg:w-[420px] lg:h-[400px]");
+
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [offset, setOffset] = useState(0);
@@ -24,7 +27,7 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
 
     const onPickIndex = useCallback((index: number): void => {
         if (pickIndex === index) {
-            // 선택되어 있는 인덱스를 클릭시에는 아무것도 실행하지 않는다.
+            // 똑같은 index 선택시 이동X
             return;
         }
         if (pickIndex > index) {
@@ -38,7 +41,6 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
     //Dot으로 이동
     useEffect(() => {
         //하단 버튼으로 이동할 시에도 애니메이션 적용
-
         setPickers(projectImages.map((image: imgItems, index: number) => {
             return (
                 <div className={`${pickIndex === index ? "bg-orange-400 w-3 h-3 rounded-full" : "bg-gray-400 w-3 h-3 rounded-full"}`}
@@ -82,12 +84,13 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
         // 인덱스 증가
     }, [pickIndex]);
 
-
+    // 마우스 드래그 이벤트 시작
     const handleMouseDown = (e: React.MouseEvent) => {
         setIsDragging(true);
         setStartX(e.clientX - offset);
     };
 
+    //마우스 드래그 이벤트
     const handleMouseMove = (e: React.MouseEvent) => {
         if (!isDragging) return;
 
@@ -103,7 +106,7 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
     };
 
 
-
+    //마우스 드래그 종료
     const handleMouseUp = () => {
         setIsDragging(false);
         // 좌우 슬라이드가 아니면 원래 위치로 돌아가기
@@ -141,6 +144,7 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
     };
 
 
+    //마우스가 포커스에서 벗어날 경우 강제로 마우스 드래그 종료
     const handleMouseLeave = () => {
         if (isDragging) {
             // 포커스가 벗어나면서 드래그 중인 경우
@@ -148,8 +152,8 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
         }
     };
 
+    // 6초 후 자동으로 다음 슬라이드로 이동
     useEffect(() => {
-        // 6초 후 자동으로 다음 슬라이드로 이동
         const timer = setTimeout(() => {
             handleNextClick();
         }, 6000);

@@ -1,22 +1,22 @@
-import { useEffect } from "react";
-import { useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
+
+//화면에 포커싱 되었는지 확인하는 CustomHook
 const useObserver = () => {
-    const animation = useAnimation();
+    const [IntroYn, setIntroYn] = useState<boolean>(true);
     const { ref, inView } = useInView();
 
+    //Intro 포커싱 여부 확인
     useEffect(() => {
         if (inView) {
-            animation.start("visible");
-            console.log("v");
+            setIntroYn(true);
         } else {
-            animation.start("hidden");
-            console.log("h")
+            setIntroYn(false)
         }
-    }, [animation, inView]);
+    }, [IntroYn, inView]);
 
-    return { ref, animation };
+    return { ref, IntroYn };
 };
 
 export default useObserver;

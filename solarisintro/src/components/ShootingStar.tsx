@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
+//내리는 별똥별 인터페이스 선언
 interface ShootingStar {
     x: number;
     y: number;
@@ -9,6 +10,7 @@ interface ShootingStar {
     acceleration: number;
 }
 
+//배경에 그려지는 별 인터페이스 선언
 interface FaintStar {
     x: number;
     y: number;
@@ -24,6 +26,7 @@ const ShootingStarsCanvas: React.FC = () => {
     const [canvasWidth, setCanvasWidth] = useState(window.innerWidth);
     const [canvasHeight, setCanvasHeight] = useState(window.innerHeight);
 
+    //캔버스 Width,Height 설정
     useEffect(() => {
         const handleResize = () => {
             setCanvasWidth(window.innerWidth);
@@ -53,6 +56,7 @@ const ShootingStarsCanvas: React.FC = () => {
             faintStars.current = [];
             shootingStars.current = [];
 
+            //배경에 별 그리기(갯수 늘리고 싶으면 숫자 조정 가능)
             for (let i = 0; i < 100; i++) {
                 faintStars.current.push({
                     x: Math.random() * width,
@@ -81,6 +85,7 @@ const ShootingStarsCanvas: React.FC = () => {
             ctx.lineWidth = 2;
             ctx.stroke();
         };
+
 
         const drawFaintStars = () => {
             faintStars.current.forEach(star => {

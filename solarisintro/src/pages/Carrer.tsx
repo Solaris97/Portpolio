@@ -8,7 +8,7 @@ const Carrer: React.FC = () => {
     return (
 
 
-        <div className="font-baseFont w-full h-[3850px] md:h-[3000px] lg:h-[2450px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
+        <div className="font-baseFont w-full h-[3850px] md:h-[3000px] lg:h-[2300px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-2 md:px-24 mt-10">
                 <h2 className="font-bold text-5xl md:text-6xl m-6 cursor-default">
@@ -19,7 +19,7 @@ const Carrer: React.FC = () => {
 
                 <div className="flex items-center flex-col justify-center mt-24 w-full">
                     <div className="flex flex-col lg:flex-row justify-center h-[2000px] md:h-[1400px] lg:h-[1100px]">
-                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[950px] border-gray-300 lg:border-r lg:border-gray-300 flex flex-row justify-center">
+                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[940px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full border-2 w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo2} className="w-44 h-30" />
                             </div>
@@ -68,7 +68,7 @@ const Carrer: React.FC = () => {
                     </div>
 
                     <div className="flex flex-col lg:flex-row justify-center h-[1350px] md:h-[1000px] lg:h-[1100px]">
-                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[750px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
+                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[780px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo1} className="w-60 h-60 rounded-full border-2 " />
                             </div>
@@ -87,7 +87,7 @@ const Carrer: React.FC = () => {
                                 <p className="text-gray-500 mt-6">2022.01 - 2022.03</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>DB 스케쥴러를 이용하여 기관의 인원을 계산하는 로직이 DB 종속성이 심해 Spring 스케쥴러로 변경</span> </li>
-                                    <li><span>인사 정보 조회시 이미지를 프리로딩하게 변경하여 성능 최적화</span> </li>
+                                    <li><span>인사 정보 조회시 이미지 프리로딩을 구현하여 캐싱된 이미지를 가지고 오도록 변경, 기존 대비 로딩 시간을 최적화</span> </li>
                                     <li><span>인원 확인 화면 초기 로딩시 불러올 데이터가 많아 사용자가 기다리는 시간이 길어 스켈레톤 로딩 구현으로 UX 개선</span></li>
                                 </ul>
                             </div>

@@ -19,23 +19,6 @@ const preloadImages = (imagePaths: string[]) => {
 
 const MainPage: React.FC = () => {
 
-    //렌더링 이전에 실행
-    useLayoutEffect(() => {
-        // 이미지 경로 배열 선언
-        const imagePaths = [
-            "../assets/Img/ppImg1.png",
-            "../assets/Img/ppImg2.png",
-            "../assets/Img/ppImg3.png",
-            "../assets/Img/ppImg4.png",
-            "../assets/Img/hpImg1.png",
-            "../assets/Img/hpImg2.png",
-            "../assets/Img/hpImg3.png",
-        ];
-
-        // 이미지를 프리로드
-        preloadImages(imagePaths);
-    }, []);
-
     //포커싱 이동을 위한 useRef
     const IntroRef = useRef<HTMLDivElement | null>(null);
     const AboutRef = useRef<HTMLDivElement | null>(null);

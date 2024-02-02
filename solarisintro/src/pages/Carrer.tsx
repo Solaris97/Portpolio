@@ -68,7 +68,7 @@ const Carrer: React.FC = () => {
                     </div>
 
                     <div className="flex flex-col lg:flex-row justify-center h-[1850px] md:h-[1000px] lg:h-[1100px]">
-                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[780px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
+                        <div className="w-full lg:w-[300px] h-[300px] lg:h-[740px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo1} className="w-60 h-60 rounded-full border-2 " />
                             </div>
@@ -87,8 +87,7 @@ const Carrer: React.FC = () => {
                                 <p className="text-gray-500 mt-6">2022.01 - 2022.03</p>
                                 <ul className="list-disc leading-6 list-inside mt-6">
                                     <li><span>DB 스케쥴러를 이용하여 기관의 인원을 계산하는 로직이 DB 종속성이 심해 Spring 스케쥴러로 변경</span> </li>
-                                    <li><span>인사 정보 조회시 이미지 프리로딩을 구현하여 캐싱된 이미지를 가지고 오도록 변경, 기존 대비 로딩 시간을 최적화</span> </li>
-                                    <li><span>인원 확인 화면 초기 로딩시 불러올 데이터가 많아 사용자가 기다리는 시간이 길어 스켈레톤 로딩 구현으로 UX 개선</span></li>
+                                    <li><span>인사 정보 조회시 이미지 프리로딩을 구현하여 캐싱된 이미지를 가지고 오도록 변경, 기존 대비 이미지 로딩 시간을 줄임</span> </li>
                                 </ul>
                             </div>
                             <div className="my-6">

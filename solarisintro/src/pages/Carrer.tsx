@@ -8,7 +8,7 @@ const Carrer: React.FC = () => {
     return (
 
 
-        <div className="font-baseFont w-full h-[3300px] md:h-[2850px] lg:h-[2250px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
+        <div className="font-baseFont w-full h-[3400px] md:h-[2850px] lg:h-[2250px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-2 md:px-24 mt-10">
                 <h2 className="font-bold text-5xl md:text-6xl m-6 cursor-default">
@@ -18,7 +18,7 @@ const Carrer: React.FC = () => {
                 </div>
 
                 <div className="flex items-center flex-col justify-center mt-24 w-full">
-                    <div className="flex flex-col lg:flex-row justify-center h-[1600px] md:h-[1400px] lg:h-[1100px]">
+                    <div className="flex flex-col lg:flex-row justify-center h-[1400px] md:h-[1400px] lg:h-[1100px]">
                         <div className="w-full lg:w-[300px] h-[300px] lg:h-[940px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full border-2 w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo2} className="w-44 h-30" />
@@ -67,7 +67,7 @@ const Carrer: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row justify-center h-[1350px] md:h-[1000px] lg:h-[1100px]">
+                    <div className="flex flex-col lg:flex-row justify-center h-[1850px] md:h-[1000px] lg:h-[1100px]">
                         <div className="w-full lg:w-[300px] h-[300px] lg:h-[780px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo1} className="w-60 h-60 rounded-full border-2 " />

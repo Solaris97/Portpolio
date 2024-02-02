@@ -23,6 +23,7 @@ const MainPage: React.FC = () => {
     //포커싱 이동
     const handleMoveDownClick = (flag: string) => {
         if (flag === "Intro") {
+            console.log("뭐임")
             IntroRef.current?.scrollIntoView({ behavior: 'smooth' });
         }
         else if (flag === "About") {

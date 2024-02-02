@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ handleMoveDownClick, IntroYn }) => {
                 "font-baseFont bg-white text-black bg-opacity-70 shadow-xl  w-full h-16 fixed flex flex-row items-center justify-center z-40"}`}>
                 <div className="font-bold text-3xl w-2/5 flex flex-col justify-center items-center">
                     <div>
-                        <span className="cursor-pointer transition-colors duration-100 hover:text-orange-400" onClick={handleClick} id="Intro ">Solaris</span>
+                        <span className="cursor-pointer transition-colors duration-100 hover:text-orange-400" onClick={handleClick} id="Intro">Solaris</span>
                     </div>
                 </div>
                 {/* <div className=""> */}
@@ -50,9 +50,9 @@ const Header: React.FC<HeaderProps> = ({ handleMoveDownClick, IntroYn }) => {
 
 
                 {/* 반응형 */}
-                <div className="text-xl w-1/5 absolute right-20 flex flex-row justify-end visible md:invisible">
+                <div className="text-xl w-1/5 absolute right-14 flex flex-row justify-end visible md:invisible">
                     {IntroYn ?
-                        <div className="w-8"><span className="cursor-pointer" onClick={handleClickModal} id="hamburger"><img src={hamburgerWhite} /></span>
+                        <div className="w-10"><span className="cursor-pointer" onClick={handleClickModal} id="hamburger"><img src={hamburgerWhite} /></span>
                         </div>
                         : <div className="w-10"><span className="cursor-pointer" onClick={handleClickModal} id="hamburger"><img src={hamburgerBlack} /></span>
                         </div>}

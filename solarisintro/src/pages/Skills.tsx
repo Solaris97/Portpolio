@@ -87,7 +87,7 @@ const Skills: React.FC = () => {
                 </div>
 
                 <div className="flex items-center flex-col justify-center lg:flex lg:items-center lg:flex-row lg:justify-center mt-20 w-full lg:gap-8">
-                    <div className="w-90 h-[650px]">
+                    <div className="w-90 h-[600px]">
                         <div className="bg-white w-80 h-[550px] rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="font-bold text-xl border-b-2 text-orange-500">Front-End</p>
@@ -123,7 +123,7 @@ const Skills: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-90 h-[650px]">
+                    <div className="w-90 h-[600px]">
                         <div className="bg-white w-80 h-[550px] rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="font-bold text-xl border-b-2 text-orange-500">Back-End</p>
@@ -144,7 +144,7 @@ const Skills: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-90 h-[650px]">
+                    <div className="w-90 h-[600px]">
                         <div className="bg-white w-80 h-96 rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="font-bold text-xl border-b-2 text-orange-500">Tools</p>

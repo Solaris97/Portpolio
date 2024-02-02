@@ -13,6 +13,15 @@ type imgItems = {
     src?: string;
 }
 
+
+const preloadImages = (imagePaths: string[]) => {
+    imagePaths.forEach((path) => {
+        const img = new Image();
+        img.src = path;
+    });
+};
+
+
 const PROJECT_IMG1: imgItems[] = [
     { index: 0, id: 'ppImg1', src: ppImg1 },
     { index: 1, id: 'ppImg2', src: ppImg2 },
@@ -26,8 +35,24 @@ const PROJECT_IMG2: imgItems[] = [
     { index: 1, id: 'hpImg2', src: hpImg2 },
 ]
 
-
 const Projects: React.FC = () => {
+
+    useEffect(() => {
+        // 이미지 경로 배열 선언
+        const imagePaths = [
+            "../assets/Img/ppImg1.png",
+            "../assets/Img/ppImg2.png",
+            "../assets/Img/ppImg3.png",
+            "../assets/Img/ppImg4.png",
+            "../assets/Img/hpImg1.png",
+            "../assets/Img/hpImg2.png",
+        ];
+
+        // 이미지를 프리로드
+        preloadImages(imagePaths);
+    }, []);
+
+
 
     return (
 
@@ -85,7 +110,7 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white w-full h-[840px] md:h-[600px] lg:h-[580px] rounded-lg text-left mt-8 shadow-lg" >
+                        <div className="bg-white w-full h-[840px] md:h-[600px] lg:h-[580px] rounded-lg text-left mt-12 shadow-lg" >
                             <div className="p-4 flex flex-col items-center">
                                 <div className="mt-6 text-center">
                                     <p className="font-bold text-3xl">사전문진 웹 사이트</p>

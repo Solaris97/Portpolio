@@ -8,7 +8,7 @@ const Carrer: React.FC = () => {
     return (
 
 
-        <div className="font-baseFont w-full h-[3850px] md:h-[3000px] lg:h-[2300px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
+        <div className="font-baseFont w-full h-[3300px] md:h-[2850px] lg:h-[2250px] text-center mx-0 my-auto bg-gray-100 overflow-hidden">
             {/* 텍스트 영역 */}
             <div className="absolute w-full flex items-center flex-col px-2 md:px-24 mt-10">
                 <h2 className="font-bold text-5xl md:text-6xl m-6 cursor-default">
@@ -18,14 +18,14 @@ const Carrer: React.FC = () => {
                 </div>
 
                 <div className="flex items-center flex-col justify-center mt-24 w-full">
-                    <div className="flex flex-col lg:flex-row justify-center h-[2000px] md:h-[1400px] lg:h-[1100px]">
+                    <div className="flex flex-col lg:flex-row justify-center h-[1600px] md:h-[1400px] lg:h-[1100px]">
                         <div className="w-full lg:w-[300px] h-[300px] lg:h-[940px] lg:border-r lg:border-gray-300 flex flex-row justify-center">
                             <div className="rounded-full border-2 w-60 h-60 flex items-center flex-row justify-center bg-white">
                                 <img src={carrerLogo2} className="w-44 h-30" />
                             </div>
                         </div>
 
-                        <div className="md:w-[700px] sm:[100px] h-[1450px] md:h-[1100px] text-left ml-8">
+                        <div className="md:w-[700px] sm:[100px] h-[1050px] md:h-[1100px] text-left ml-8">
                             <div className="border-b border-gray-300 h-[350px] md:h-[260px]">
                                 <p className="text-4xl"><strong>보이노시스</strong></p>
                                 <p className="text-gray-500 mt-6">2022.08 - 2023.11</p>

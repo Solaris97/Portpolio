@@ -172,7 +172,7 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className="w-full h-full relative flex items-center flex-col">
+                <div className="w-full h-full relative flex items-center flex-col z-10">
                     <div className="overflow-hidden">
                         <img src={projectImages[pickIndex].src} key={animation} className={animation} />
                     </div>
@@ -180,11 +180,11 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
                         {pickers}
                     </div>
                 </div>
-                <div className="absolute left-4 " >
-                    <img onClick={handlePrevClick} src={arrowButton} className="h-6 w-6 rotate-180 text-base rounded-full opacity-60 hover:opacity-100 bg-white" />
+                <div className="absolute left-4 z-20" >
+                    <img onClick={handlePrevClick} src={arrowButton} className="h-6 w-6 rotate-180 text-base rounded-full opacity-60 cursor-pointer hover:opacity-100 bg-white" />
                 </div>
-                <div className="absolute right-4 ">
-                    <img onClick={handleNextClick} src={arrowButton} className="h-6 w-6 text-base rounded-full opacity-60 hover:opacity-100 bg-white" />
+                <div className="absolute right-4 z-20">
+                    <img onClick={handleNextClick} src={arrowButton} className="h-6 w-6 text-base rounded-full opacity-60 cursor-pointer hover:opacity-100 bg-white" />
                 </div>
             </div>
         </div>

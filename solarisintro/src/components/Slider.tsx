@@ -152,6 +152,61 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
         }
     };
 
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setIsDragging(true);
+        setStartX(e.touches[0].clientX - offset);
+    };
+
+    // 터치 이동 이벤트
+    const handleTouchMove = (e: React.TouchEvent) => {
+        if (!isDragging) return;
+
+        const x = e.touches[0].clientX - startX;
+        setOffset(x);
+
+        // 터치 이동에 따라 이미지의 위치를 업데이트
+        if (sliderRef.current) {
+            const slider = sliderRef.current;
+            const currentImage = slider.getElementsByTagName('img')[0];
+            currentImage.style.transform = `translateX(${x}px)`;
+        }
+    };
+
+    // 터치 종료 이벤트
+    const handleTouchEnd = () => {
+        setIsDragging(false);
+        // 좌우 슬라이드가 아니면 원래 위치로 돌아가기
+        if (Math.abs(offset) < sliderRef.current!.offsetWidth / 2) {
+            // 원래 위치로 돌아가기 위한 애니메이션
+            const currentImage = sliderRef.current!.getElementsByTagName('img')[0];
+            currentImage.style.transition = 'transform 0.3s ease-out';
+            currentImage.style.transform = 'translateX(0px)';
+
+            // 애니메이션 종료 후 transition 제거
+            setTimeout(() => {
+                currentImage.style.transition = '';
+            }, 300);
+            setAnimation("w-[300px] h-[220px] md:w-[300px] md:h-[300px] lg:w-[420px] lg:h-[400px]");
+            return;
+        }
+
+        // 슬라이드가 50% 이상 이동하면 다음 또는 이전 이미지로 이동
+        if (offset > sliderRef.current!.offsetWidth / 2) {
+            handlePrevClick();
+            const currentImage = sliderRef.current!.getElementsByTagName('img')[0];
+            currentImage.style.transition = 'transform 0.3s ease-out';
+            currentImage.style.transform = 'translateX(0px)';
+        } else if (offset < -sliderRef.current!.offsetWidth / 2) {
+            handleNextClick();
+            const currentImage = sliderRef.current!.getElementsByTagName('img')[0];
+            currentImage.style.transition = 'transform 0.3s ease-out';
+            currentImage.style.transform = 'translateX(0px)';
+        }
+
+        // 초기화
+        setOffset(0);
+    };
+
     // 6초 후 자동으로 다음 슬라이드로 이동
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -171,6 +226,9 @@ const Slider: React.FC<SliderProps> = ({ projectImages }) => {
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseLeave}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
             >
                 <div className="w-full h-full relative flex items-center flex-col z-10">
                     <div className="overflow-hidden">

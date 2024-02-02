@@ -14,10 +14,10 @@ const Intro: React.FC<IntroProps> = ({ handleMoveDownClick }) => {
     }
 
     return (
-        <div className="w-full h-100v text-center mx-0 my-auto ">
-            <div className="w-full h-100v">
+        <div className="w-full h-100dv text-center mx-0 my-auto ">
+            <div className="w-full h-100dv">
                 {/* 텍스트 영역 */}
-                <div className="absolute w-full h-100v flex items-center flex-col justify-center overflow-hidden">
+                <div className="absolute w-full h-100dv flex items-center flex-col justify-center overflow-hidden">
                     <ul className="absolute z-10 cursor-default">
                         <li className="font-engTitile text-white text-5xl lg:text-7xl m-6 transition-colors duration-500 hover:text-starYellow">
                             Web Developer

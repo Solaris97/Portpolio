@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import Slider from "../components/Slider"
 import ppImg1 from "../assets/Img/ppImg1.png";
 import ppImg2 from "../assets/Img/ppImg2.png";
@@ -14,7 +14,7 @@ type imgItems = {
     src?: string;
 }
 
-
+//프리로드 이미지 함수
 const preloadImages = (imagePaths: string[]) => {
     imagePaths.forEach((path) => {
         const img = new Image();
@@ -38,23 +38,6 @@ const PROJECT_IMG2: imgItems[] = [
 ]
 
 const Projects: React.FC = () => {
-
-    //렌더링 이전에 실행
-    useLayoutEffect(() => {
-        // 이미지 경로 배열 선언
-        const imagePaths = [
-            ppImg1,
-            ppImg2,
-            ppImg3,
-            hpImg1,
-            hpImg2,
-            hpImg3
-        ];
-
-        // 이미지를 프리로드
-        preloadImages(imagePaths);
-    }, []);
-
 
 
     return (

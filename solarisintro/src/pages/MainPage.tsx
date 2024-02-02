@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import Intro from "./Intro";
 import About from "./About";
 import Archive from "./Archive";
@@ -9,7 +9,32 @@ import Header from "../components/Header"
 import useObserver from "../hooks/useObserver";
 import upArrowButton from "../assets/Img/upArrowButton.png";
 
+//프리로드 이미지 함수
+const preloadImages = (imagePaths: string[]) => {
+    imagePaths.forEach((path) => {
+        const img = new Image();
+        img.src = path;
+    });
+};
+
 const MainPage: React.FC = () => {
+
+    //렌더링 이전에 실행
+    useLayoutEffect(() => {
+        // 이미지 경로 배열 선언
+        const imagePaths = [
+            "../assets/Img/ppImg1.png",
+            "../assets/Img/ppImg2.png",
+            "../assets/Img/ppImg3.png",
+            "../assets/Img/ppImg4.png",
+            "../assets/Img/hpImg1.png",
+            "../assets/Img/hpImg2.png",
+            "../assets/Img/hpImg3.png",
+        ];
+
+        // 이미지를 프리로드
+        preloadImages(imagePaths);
+    }, []);
 
     //포커싱 이동을 위한 useRef
     const IntroRef = useRef<HTMLDivElement | null>(null);

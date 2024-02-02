@@ -146,8 +146,8 @@ const Skills: React.FC = () => {
                                 {SKILLS_FIELD_TOOLS.map(({ id, src }) => (
                                     <div className="flex items-center justify-start mt-4 gap-8">
 
-                                        <div className="w-full h-24 flex items-center justify-start hover:scale-110" id={id}>
-                                            <img className="w-full h-32" src={src} alt={id}></img>
+                                        <div className="w-48 h-20 flex items-center justify-start hover:scale-110" id={id}>
+                                            <img className="w-48 h-18" src={src} alt={id}></img>
                                         </div>
                                     </div>
                                 ))}

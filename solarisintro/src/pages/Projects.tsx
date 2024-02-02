@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import Slider from "../components/Slider"
 import ppImg1 from "../assets/Img/ppImg1.png";
 import ppImg2 from "../assets/Img/ppImg2.png";
@@ -6,6 +6,7 @@ import ppImg3 from "../assets/Img/ppImg3.png";
 import ppImg4 from "../assets/Img/ppImg4.png";
 import hpImg1 from "../assets/Img/hpImg1.png";
 import hpImg2 from "../assets/Img/hpImg2.png";
+import hpImg3 from "../assets/Img/hpImg3.png";
 
 type imgItems = {
     index: number;
@@ -33,19 +34,21 @@ const PROJECT_IMG1: imgItems[] = [
 const PROJECT_IMG2: imgItems[] = [
     { index: 0, id: 'hpImg1', src: hpImg1 },
     { index: 1, id: 'hpImg2', src: hpImg2 },
+    { index: 2, id: 'hpImg3', src: hpImg3 },
 ]
 
 const Projects: React.FC = () => {
 
-    useEffect(() => {
+    //렌더링 이전에 실행
+    useLayoutEffect(() => {
         // 이미지 경로 배열 선언
         const imagePaths = [
-            "../assets/Img/ppImg1.png",
-            "../assets/Img/ppImg2.png",
-            "../assets/Img/ppImg3.png",
-            "../assets/Img/ppImg4.png",
-            "../assets/Img/hpImg1.png",
-            "../assets/Img/hpImg2.png",
+            ppImg1,
+            ppImg2,
+            ppImg3,
+            hpImg1,
+            hpImg2,
+            hpImg3
         ];
 
         // 이미지를 프리로드

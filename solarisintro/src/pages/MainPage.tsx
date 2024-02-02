@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, forwardRef } from "react";
+import React, { useRef } from "react";
 import Intro from "./Intro";
 import About from "./About";
 import Archive from "./Archive";
@@ -7,6 +7,7 @@ import Projects from "./Projects";
 import Carrer from "./Carrer";
 import Header from "../components/Header"
 import useObserver from "../hooks/useObserver";
+import upArrowButton from "../assets/Img/upArrowButton.png";
 
 const MainPage: React.FC = () => {
 
@@ -46,7 +47,12 @@ const MainPage: React.FC = () => {
         <div className="relative">
             <Header handleMoveDownClick={handleMoveDownClick} IntroYn={IntroYn} />
             <div className="z-30">
-
+                {!IntroYn &&
+                    <div className="fixed w-12 h-12 rotate-90 bottom-8 right-8 z-40"><img onClick={() => {
+                        handleMoveDownClick("Intro");
+                    }}
+                        className="opacity-60 hover:opacity-100" src={upArrowButton} /></div>
+                }
                 <div ref={ref}>
                     <div ref={IntroRef}>
                         <Intro handleMoveDownClick={handleMoveDownClick} />

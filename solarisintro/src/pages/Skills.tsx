@@ -14,7 +14,7 @@ import IconSpring from "../assets/logo/springLogo.svg";
 import IconFlask from "../assets/logo/flaskLogo.svg";
 import IconMysql from "../assets/logo/mysqlLogo.svg";
 
-import IconNotion from "../assets/logo/notionLogo.svg";
+import IconNotion from "../assets/logo/notionLogo.png";
 import IconFigma from "../assets/logo/figmaLogo.svg";
 
 import IconGit from "../assets/logo/gitLogo.svg";
@@ -64,15 +64,6 @@ const SKILLS_FIELD_VCS: skillsItems[] = [
 ]
 
 const Skills: React.FC = () => {
-    // const [expState, setExpState] = useState<string>("");
-    // const handleMouseOver = (e: React.MouseEvent<HTMLDivElement>) => {
-    //     setExpState(e.currentTarget.id)
-    // }
-
-
-    // const handleMouseOut = (e: React.MouseEvent<HTMLDivElement>) => {
-    //     setExpState("")
-    // }
 
     return (
 
@@ -95,7 +86,7 @@ const Skills: React.FC = () => {
                                 <div className="flex items-center justify-center mt-4 gap-2">
                                     {SKILLS_FIELD_FE1.map(({ id, src }) => (
                                         <div
-                                            className="w-24 h-24 flex items-center justify-center brightness-50 hover:scale-110" id={id}>
+                                            className="w-24 h-24 flex items-center justify-center hover:scale-110" id={id}>
                                             <img
                                                 // onMouseOver={handleMouseOver}
                                                 //     onMouseOut={handleMouseOut}
@@ -127,20 +118,24 @@ const Skills: React.FC = () => {
                         <div className="bg-white w-80 h-[550px] rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="font-bold text-xl border-b-2 text-orange-500">Back-End</p>
-                                <div className="flex items-center justify-left mt-4 gap-2">
-                                    {SKILLS_FIELD_BE1.map(({ id, src }) => (
-                                        <div className="w-32 h-32 flex items-center justify-left hover:scale-110" id={id}>
-                                            <img className="w-30 h-30" src={src} alt={id}></img>
+
+                                {SKILLS_FIELD_BE1.map(({ id, src }) => (
+                                    <div className="flex items-center justify-start mt-4 gap-2">
+
+                                        <div className="w-full h-20 flex items-center justify-start hover:scale-110" id={id}>
+                                            <img className="w-full h-20" src={src} alt={id}></img>
                                         </div>
-                                    ))}
-                                </div>
-                                <div className="flex items-center justify-left mt-4 gap-2">
+                                    </div>
+                                ))}
+
+                                <div className="flex items-center justify-start mt-4 gap-2">
                                     {SKILLS_FIELD_BE2.map(({ id, src }) => (
-                                        <div className="w-32 h-32 flex items-center justify-left hover:scale-110" id={id}>
-                                            <img className="w-20 h-20" src={src} alt={id}></img>
+                                        <div className="w-32 h-32 flex items-center justify-start hover:scale-110" id={id}>
+                                            <img className="w-24 h-24" src={src} alt={id}></img>
                                         </div>
                                     ))}
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -148,21 +143,23 @@ const Skills: React.FC = () => {
                         <div className="bg-white w-80 h-96 rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="font-bold text-xl border-b-2 text-orange-500">Tools</p>
-                                <div className="flex items-center justify-left mt-4 gap-8">
-                                    {SKILLS_FIELD_TOOLS.map(({ id, src }) => (
-                                        <div className="w-24 h-20 flex items-center justify-left hover:scale-110" id={id}>
-                                            <img className="w-22 h-20" src={src} alt={id}></img>
+                                {SKILLS_FIELD_TOOLS.map(({ id, src }) => (
+                                    <div className="flex items-center justify-start mt-4 gap-8">
+
+                                        <div className="w-full h-24 flex items-center justify-start hover:scale-110" id={id}>
+                                            <img className="w-full h-32" src={src} alt={id}></img>
                                         </div>
-                                    ))}
-                                </div>
+                                    </div>
+                                ))}
+
                             </div>
                         </div>
                         <div className="bg-white w-80 h-96 mt-12 lg:mt-8 rounded-lg text-left shadow-lg" >
                             <div className="p-8">
                                 <p className="font-bold text-xl border-b-2 text-orange-500">VCS</p>
-                                <div className="flex items-center justify-left mt-4 gap-8">
+                                <div className="flex items-center justify-start mt-4 gap-8">
                                     {SKILLS_FIELD_VCS.map(({ id, src }) => (
-                                        <div className="w-24 h-20 flex items-center justify-left hover:scale-110" id={id}>
+                                        <div className="w-24 h-20 flex items-center justify-start hover:scale-110" id={id}>
                                             <img className="w-16 h-16" src={src} alt={id}></img>
                                         </div>
                                     ))}

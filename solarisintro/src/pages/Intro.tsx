@@ -23,11 +23,11 @@ const Intro: React.FC<IntroProps> = ({ handleMoveDownClick }) => {
                             Web Developer
                         </li>
                         <li className="font-engTitile text-white text-5xl lg:text-7xl m-20 transition-colors duration-500 hover:text-starYellow">
-                            portfolio
+                            Portfolio
                         </li>
                     </ul>
                     {/* 하단 버튼 */}
-                    <button onClick={handleClick} className="absolute z-10 bottom-20 w-12 min-h-12 max-h-12 animate-bounce opacity-60 text-xl rounded-full bg-gray-500 text-white hover:opacity-100">▼</button>
+                    <button onClick={handleClick} className="absolute z-10 bottom-20 w-12 h-12 animate-bounce opacity-60 text-xl rounded-full bg-gray-500 text-white hover:opacity-100">▼</button>
                 </div>
 
                 {/* 배경 캔버스 */}

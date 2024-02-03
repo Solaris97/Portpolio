@@ -60,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ handleMoveDownClick, IntroYn }) => {
             </div>
             {modalState &&
                 <div className={`${IntroYn ? "font-baseFont bg-starBlack text-2xl text-white text-right bg-opacity-50 items-center pl-10 w-full mt-16 h-80 fixed shadow-xl z-40 visible md:invisible" :
-                    "font-baseFont bg-white text-2xl text-black text-right bg-opacity-50 items-center pr-16 w-full mt-16 h-80 fixed shadow-xl z-40 visible md:invisible"}`}>
+                    "font-baseFont bg-white text-2xl text-black text-right bg-opacity-50 items-center pl-10 w-full mt-16 h-80 fixed shadow-xl z-40 visible md:invisible"}`}>
                     <div className="w-full h-16 flex justify-start items-center"><span className="cursor-pointer transition-colors duration-100 hover:text-orange-400" onClick={handleClick} id="About">About Me</span></div>
                     <div className="w-full h-16 flex justify-start items-center"><span className="cursor-pointer transition-colors duration-100 hover:text-orange-400" onClick={handleClick} id="Skills">Skills</span></div>
                     <div className="w-full h-16 flex justify-start items-center"><span className="cursor-pointer transition-colors duration-100 hover:text-orange-400" onClick={handleClick} id="Projects">Projects</span></div>

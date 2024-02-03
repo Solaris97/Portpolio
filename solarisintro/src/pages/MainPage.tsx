@@ -9,15 +9,65 @@ import Header from "../components/Header"
 import useObserver from "../hooks/useObserver";
 import upArrowButton from "../assets/Img/upArrowButton.png";
 
+import IconHtml from "../assets/logo/html5Logo.png";
+import IconCss from "../assets/logo/css3Logo.png";
+import IconJs from "../assets/logo/jsLogo.png";
+import IconReact from "../assets/logo/reactLogo.png";
+import IconTs from "../assets/logo/tsLogo.png";
+import IconRecoil from "../assets/logo/recoilLogo.svg";
+import IconStyled from "../assets/logo/styledLogo.png";
+import IconTw from "../assets/logo/tailWindLogo.svg";
+import IconMUI from "../assets/logo/muiLogo.svg";
+
+import IconOracle from "../assets/logo/oracleLogo.svg";
+import IconSpring from "../assets/logo/springLogo.svg";
+import IconFlask from "../assets/logo/flaskLogo.svg";
+import IconMysql from "../assets/logo/mysqlLogo.svg";
+
+import IconNotion from "../assets/logo/notionLogo.png";
+import IconFigma from "../assets/logo/figmaLogo.svg";
+
+import IconGit from "../assets/logo/gitLogo.svg";
+import IconGithub from "../assets/logo/githubLogo.svg"
+
 //프리로드 이미지 함수
 const preloadImages = (imagePaths: string[]) => {
     imagePaths.forEach((path) => {
+        console.log(path);
         const img = new Image();
         img.src = path;
     });
 };
 
+
 const MainPage: React.FC = () => {
+
+    //렌더링 이전에 실행
+    useLayoutEffect(() => {
+        // 이미지 경로 배열 선언
+        const imagePaths = [
+            IconHtml,
+            IconCss,
+            IconJs,
+            IconReact,
+            IconTs,
+            IconRecoil,
+            IconStyled,
+            IconTw,
+            IconMUI,
+            IconOracle,
+            IconSpring,
+            IconFlask,
+            IconMysql,
+            IconNotion,
+            IconFigma,
+            IconGit,
+            IconGithub,
+
+        ];
+        // 이미지를 프리로드
+        preloadImages(imagePaths);
+    }, []);
 
     //포커싱 이동을 위한 useRef
     const IntroRef = useRef<HTMLDivElement | null>(null);
@@ -31,15 +81,14 @@ const MainPage: React.FC = () => {
     //포커싱 이동
     const handleMoveDownClick = (flag: string) => {
         if (flag === "Intro") {
-            console.log("뭐임")
             IntroRef.current?.scrollIntoView({ behavior: 'smooth' });
         }
         else if (flag === "About") {
             AboutRef.current?.scrollIntoView({ behavior: 'smooth' });
-        } else if (flag === "Skills") {
-            SkillsRef.current?.scrollIntoView({ behavior: 'smooth' });
         } else if (flag === "Projects") {
             ProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+        } else if (flag === "Skills") {
+            SkillsRef.current?.scrollIntoView({ behavior: 'smooth' });
         } else if (flag === "Carrer") {
             CarrerRef.current?.scrollIntoView({ behavior: 'smooth' });
         } else if (flag === "Archive") {
@@ -71,11 +120,11 @@ const MainPage: React.FC = () => {
                 <div ref={AboutRef}>
                     <About />
                 </div>
-                <div ref={SkillsRef}>
-                    <Skills />
-                </div>
                 <div ref={ProjectsRef}>
                     <Projects />
+                </div>
+                <div ref={SkillsRef}>
+                    <Skills />
                 </div>
                 <div ref={CarrerRef}>
                     <Carrer />

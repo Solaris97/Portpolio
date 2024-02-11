@@ -1,6 +1,10 @@
 import React, { useCallback, useRef, useState, useEffect } from "react";
 import "./slideStyle.css"
 import arrowButton from "../assets/Img/arrowButton.png";
+
+
+//https://velog.io/@qoalstn44/TIL-j3zo93wa 소스를 참고하여 드래그 하여 이동 기능 추가
+
 type imgItems = {
     index: number;
     id?: string;

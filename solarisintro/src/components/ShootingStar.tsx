@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 
+//https://codepen.io/frexuz/pen/eYvBVW 코드 참조하여 개발
+
 //내리는 별똥별 인터페이스 선언
 interface ShootingStar {
     x: number;
